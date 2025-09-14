@@ -16,7 +16,7 @@ button{
     @apply tracking-wider
 }
 section{
-    @apply w-full lg:w-[60rem];
+    @apply w-full lg:w-[60rem] py-6;
 }
 p{
     @apply text-xs sm:text-sm text-text-color dark:text-gray
