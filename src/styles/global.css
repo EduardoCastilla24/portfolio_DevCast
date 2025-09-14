@@ -2,14 +2,22 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme{
+    --color-dark: #353535;
     --color-primary: #353535;
     --color-gray: #F6F6F6;
+    --color-text-color: #353535;
 }
 
 button{
-    @apply px-4 py-3 rounded hover:scale-105 cursor-pointer transition-all duration-200 text-xs;
+    @apply px-4 py-3 rounded-lg hover:scale-105 cursor-pointer transition-all duration-200 text-xs;
 }
 
 *{
     @apply tracking-wider
+}
+section{
+    @apply w-full lg:w-[60rem];
+}
+p{
+    @apply text-xs sm:text-sm text-text-color dark:text-gray
 }
