@@ -15,9 +15,18 @@ button{
 *{
     @apply tracking-wider
 }
+
 section{
-    @apply w-full lg:w-[60rem] py-6;
+    @apply w-full lg:w-[60rem] py-16 px-8 lg:px-0;
 }
+
 p{
     @apply text-xs sm:text-sm text-text-color dark:text-gray
+}
+
+h2{
+    @apply text-3xl lg:text-5xl font-bold text-primary dark:text-white mb-4
+}
+h3{
+    @apply text-lg font-bold text-primary dark:text-white
 }
