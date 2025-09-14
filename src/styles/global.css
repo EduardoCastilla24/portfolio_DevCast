@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+    --color-primary: #353535;
+    --color-gray: #F6F6F6;
+}
+
+button{
+    @apply px-4 py-3 rounded hover:scale-105 cursor-pointer transition-all duration-200 text-xs;
+}
+
+*{
+    @apply tracking-wider
+}
