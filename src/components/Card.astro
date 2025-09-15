@@ -1,33 +1,40 @@
 ---
 import Badge from "@/components/Badge.astro";
+
+interface Props {
+    title: string;
+    description: string;
+    badges: string[];
+    images: string[];
+}
+
+const { title, description, badges, images } = Astro.props as Props;
 ---
 
-<article class="space-y-8 border border-gray-200 flex flex-col rounded-2xl shadow-sm p-6 py-8 relative max-w-md items-center">
-    <!-- etiquetas -->
+<article class="space-y-8 border border-gray-200 flex flex-col rounded-2xl shadow-sm p-6 py-8 relative w-md items-center">
     <div class="relative w-full flex gap-2">
-        <Badge/>
+        {badges.map((badge) => <Badge label={badge} />)}
     </div>
 
-    <!-- titulo -->
-    <div class="relative text-start">
-        <h4 class="font-bold">Title Project</h4>
-        <p class="">Descripcion de la aplicacion de la card, detalada brevemente</p>
+    <div class="relative text-start w-full">
+        <h4 class="font-bold">{title}</h4>
+        <p class="">{description}</p>
     </div>
 
-    <!-- imágenes con efecto collage -->
     <div class="relative w-full h-56">
-        <!-- Imagen de abajo a la izquierda -->
-        <img
-        class="absolute bottom-0 left-0 rounded-xl h-32 w-60 object-cover shadow-lg"
-        src="https://forge.laravel.com/legacy/build/assets/forge-overview-BOZJLemB.png"
-        alt=""
-        />
-
-        <!-- Imagen encima, arriba a la derecha -->
-        <img
-        class="absolute top-0 right-0 rounded-xl h-32 w-60 object-cover shadow-xl z-10"
-        src="https://forge.laravel.com/legacy/build/assets/forge-overview-BOZJLemB.png"
-        alt=""
-        />
+        { images.length > 0 && (
+            <img
+            class="absolute bottom-0 left-0 rounded-xl h-32 w-60 object-cover shadow-lg"
+            src={images[0]}
+            alt={title}
+            />
+        )}
+        { images.length > 1 && (
+            <img
+            class="absolute top-0 right-0 rounded-xl h-32 w-60 object-cover shadow-xl z-10"
+            src={images[1]}
+            alt={title}
+            />
+        )}
     </div>
 </article>

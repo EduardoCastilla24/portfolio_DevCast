@@ -1,1 +1,8 @@
-<span class="bg-dark text-white text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-white dark:text-primary">Default</span>
+---
+interface Props {
+  label: string;
+}
+
+const { label } = Astro.props as Props;
+---
+<span class="bg-dark text-white text-xs font-medium px-2.5 py-0.5 rounded-sm dark:bg-white dark:text-primary">{label}</span>
