@@ -19,8 +19,8 @@ button{
     @apply tracking-wider leading-relaxed
 }
 
-section{
-    @apply w-full lg:w-[60rem] py-16 px-8 lg:px-0;
+section, footer{
+    @apply w-full lg:w-[60rem] py-16 px-8 lg:px-0 top-24 relative;
 }
 
 p{

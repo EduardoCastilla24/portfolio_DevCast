@@ -1,0 +1,19 @@
+---
+  import socials from '../../public/data/socials.ts';
+---
+
+<div class="flex gap-4 text-primary dark:text-white items-center">
+  {
+    socials.map((social) => (
+      <a
+        href={social.link}
+        class="rounded-md border p-1 border-gray-200"
+        target="_blank"
+        aria-label={social.label}
+        title={social.label}
+        rel="noopener noreferrer"
+        set:html={social.icon}
+      ></a>
+    ))
+  }
+</div>
