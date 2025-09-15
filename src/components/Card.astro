@@ -1,0 +1,33 @@
+---
+import Badge from "@/components/Badge.astro";
+---
+
+<article class="space-y-8 border border-gray-200 flex flex-col rounded-2xl shadow-sm p-6 py-8 relative max-w-md items-center">
+    <!-- etiquetas -->
+    <div class="relative w-full flex gap-2">
+        <Badge/>
+    </div>
+
+    <!-- titulo -->
+    <div class="relative text-start">
+        <h4 class="font-bold">Title Project</h4>
+        <p class="">Descripcion de la aplicacion de la card, detalada brevemente</p>
+    </div>
+
+    <!-- imágenes con efecto collage -->
+    <div class="relative w-full h-56">
+        <!-- Imagen de abajo a la izquierda -->
+        <img
+        class="absolute bottom-0 left-0 rounded-xl h-32 w-60 object-cover shadow-lg"
+        src="https://forge.laravel.com/legacy/build/assets/forge-overview-BOZJLemB.png"
+        alt=""
+        />
+
+        <!-- Imagen encima, arriba a la derecha -->
+        <img
+        class="absolute top-0 right-0 rounded-xl h-32 w-60 object-cover shadow-xl z-10"
+        src="https://forge.laravel.com/legacy/build/assets/forge-overview-BOZJLemB.png"
+        alt=""
+        />
+    </div>
+</article>

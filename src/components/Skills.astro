@@ -1,0 +1,21 @@
+---
+import Slider from "@/components/Slider.astro";
+import logos_front_back from "../../public/data/icons_front_back.ts";
+import logos_tools from "../../public/data/icons_tools.ts";
+---
+
+<section
+  class="bg-white dark:bg-dark flex flex-col justify-center items-center"
+>
+    <h2 class="w-full !text-end">Habilidades.</h2>
+
+    <div class="space-y-4 flex flex-col justify-center items-center w-full">
+        <Slider logos={logos_front_back} title="Fronted / Backend" />
+        <Slider logos={logos_tools} title="Herramientas" />
+    </div>
+</section>
+
+<style>
+    
+
+</style>

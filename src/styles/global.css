@@ -6,6 +6,9 @@
     --color-primary: #353535;
     --color-gray: #F6F6F6;
     --color-text-color: #353535;
+
+    --animate-slide: slide 15s linear infinite;
+
 }
 
 button{
@@ -13,7 +16,7 @@ button{
 }
 
 *{
-    @apply tracking-wider
+    @apply tracking-wider leading-relaxed
 }
 
 section{
@@ -29,4 +32,28 @@ h2{
 }
 h3{
     @apply text-lg font-bold text-primary dark:text-white
+}
+
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.overflow-x-auto::-webkit-scrollbar {
+    display: none;
+}
+
+.overflow-x-auto {
+    mask-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
 }
