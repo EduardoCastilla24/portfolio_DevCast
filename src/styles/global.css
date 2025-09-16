@@ -16,7 +16,7 @@ button{
 }
 
 *{
-    @apply tracking-wider leading-relaxed
+    @apply tracking-wider leading-relaxed scroll-smooth;
 }
 
 section, footer{
