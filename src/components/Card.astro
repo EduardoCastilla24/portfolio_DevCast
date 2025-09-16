@@ -11,7 +11,7 @@ interface Props {
 const { title, description, badges, images } = Astro.props as Props;
 ---
 
-<article class="space-y-8 border border-gray-200 flex flex-col rounded-2xl shadow-sm p-6 py-8 relative w-md items-center">
+<article class="space-y-8 border border-gray-200 flex flex-col rounded-2xl shadow-sm p-6 py-8 relative w-full lg:w-md items-center">
     <div class="relative w-full flex gap-2">
         {badges.map((badge) => <Badge label={badge} />)}
     </div>
@@ -31,7 +31,7 @@ const { title, description, badges, images } = Astro.props as Props;
         )}
         { images.length > 1 && (
             <img
-            class="absolute top-0 right-0 rounded-xl h-32 w-60 object-cover shadow-xl z-10"
+            class="absolute top-0 right-0 rounded-xl h-32 w-60 object-cover aspect-auto shadow-xl z-10"
             src={images[1]}
             alt={title}
             />

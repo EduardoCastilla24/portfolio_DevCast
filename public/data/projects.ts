@@ -1,22 +1,22 @@
 const projects = [
   {
-    "title": "Project One",
-    "description": "Descripcion breve del primer proyecto",
-    "badges": ["Astro", "Tailwind", "Frontend"],
+    "title": "Balanza con Gestión de Residuos",
+    "description": "Desarrollé una balanza digital con registro y control de residuos, logrando reconocimiento municipal en la provincia Chincha.",
+    "badges": ["Mysql", "Laravel", "JavaScript"],
     "images": [
-      "https://forge.laravel.com/legacy/build/assets/forge-overview-BOZJLemB.png",
-      "https://forge.laravel.com/legacy/build/assets/forge-overview-BOZJLemB.png"
+      "/assets/projects/gurs_1.webp",
+      "/assets/projects/gurs_2.webp",
     ]
   },
   {
-    "title": "Project Two",
-    "description": "Otro proyecto con imágenes diferentes",
-    "badges": ["Laravel", "Backend"],
+    "title": "Sistema de Gestión de Productos Internos",
+    "description": "Diseñé un sistema interno de búsqueda de productos para optimizar la consulta y control de inventario.",
+    "badges": ["Astro", "Tailwindcss", "JavaScript"],
     "images": [
-      "https://via.placeholder.com/300x200",
-      "https://via.placeholder.com/300x200"
+      "/assets/projects/tottus_1.webp",
+      "/assets/projects/tottus_2.webp",
     ]
-  }
+  },
 ]
 
 export default projects;
