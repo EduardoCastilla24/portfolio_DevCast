@@ -1,0 +1,57 @@
+---
+interface Props {
+    id: string;
+    form_id: string;
+}
+
+const { id, form_id } = Astro.props;
+---
+
+<dialog id={id}>
+    <div class="relative">
+        <button
+            class="cancel z-20 absolute top-2 right-2"
+            onclick={`Close_Event('${id}', '${form_id}')`}>
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-x"
+                ><path stroke="none" d="M0 0h24v24H0z" fill="none"
+                ></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"
+                ></path></svg>
+        </button>
+        <article class="flex items-center !w-full h-full relative top-0 gap-4">
+            <div class="hidden lg:flex items-center h-fit justify-center rounded-2xl relative flex-col gap-2">
+                <div class="w-full h-8 border-dashed border-2 border-dark/40 rounded-lg"></div>
+                <img src="/assets/watson.webp" alt="Foto del gato de Eduardo Castilla">
+                <div class="w-full h-8 border-dashed border-2 border-dark/40 rounded-lg"></div>
+            </div>
+
+            <form
+                method="POST"
+                class="form_element px-4 max-w-md min-h-full"
+                id={form_id}
+                enctype="multipart/form-data"
+            >
+                    <slot></slot>
+            </form>
+        </article>
+    </div>
+</dialog>
+
+
+<script type="module">
+    import { Close_Modal } from "/js/Modal/Modal.js";
+
+    // Exponer la funci├│n al ├ímbito global
+    window.Close_Event = function Close_Event(id, form_id) {
+        Close_Modal(id, form_id);
+    };
+</script>

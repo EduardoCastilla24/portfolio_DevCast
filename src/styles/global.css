@@ -1,59 +1,60 @@
 @import "tailwindcss";
+@import "./components/forms.css";
+@import "./components/modal.css";
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme{
-    --color-dark: #353535;
-    --color-primary: #353535;
-    --color-gray: #F6F6F6;
-    --color-text-color: #353535;
+@theme {
+  --color-dark: #353535;
+  --color-primary: #353535;
+  --color-gray: #f6f6f6;
+  --color-text-color: #353535;
 
-    --animate-slide: slide 15s linear infinite;
-
+  --animate-slide: slide 15s linear infinite;
 }
 
-button{
-    @apply px-4 py-3 rounded-lg hover:scale-105 cursor-pointer transition-all duration-200 text-xs;
+button {
+  @apply px-4 py-3 rounded-lg hover:scale-105 cursor-pointer transition-all duration-200 text-xs;
 }
 
-*{
-    @apply tracking-wider leading-relaxed scroll-smooth;
+* {
+  @apply tracking-wider leading-relaxed scroll-smooth;
 }
 
-section, footer{
-    @apply w-full lg:w-[60rem] py-16 px-8 lg:px-0 top-24 relative;
+section,
+footer {
+  @apply w-full lg:w-[60rem] py-16 px-8 lg:px-0 top-24 relative;
 }
 
-p{
-    @apply text-xs sm:text-sm text-text-color dark:text-gray
+p {
+  @apply text-xs sm:text-sm text-text-color dark:text-gray;
 }
 
-h2{
-    @apply text-3xl lg:text-5xl font-bold text-primary dark:text-white mb-4
+h2 {
+  @apply text-3xl lg:text-5xl font-bold text-primary dark:text-white mb-4;
 }
-h3{
-    @apply text-lg font-bold text-primary dark:text-white
+h3 {
+  @apply text-lg font-bold text-primary dark:text-white;
 }
-
 
 @keyframes slide {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-50%);
-    }
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .overflow-x-auto::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .overflow-x-auto {
-    mask-image: linear-gradient(
-        90deg,
-        transparent 0%,
-        black 10%,
-        black 90%,
-        transparent 100%
-    );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
 }

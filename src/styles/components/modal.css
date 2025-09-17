@@ -1,0 +1,24 @@
+dialog[open] {
+    scale: 1;
+    transition: scale 0.3s ease;
+    @starting-style {
+        scale: 0;
+    }
+}
+
+dialog {
+    scale: 0;
+    transition:
+        scale 0.3s ease,
+        display 0.3s ease allow-discrete;
+    @apply bg-transparent outline-none flex items-center justify-center w-full h-full m-auto;
+}
+
+dialog > div {
+    @apply p-6 space-y-6 bg-white rounded-2xl shadow-lg max-w-4xl flex items-start;
+}
+
+
+dialog::backdrop {
+    backdrop-filter: blur(4px);
+}
