@@ -7,8 +7,8 @@ interface Props {
 const { id, form_id } = Astro.props;
 ---
 
-<dialog id={id}>
-    <div class="relative">
+<dialog id={id} class="rounded-2xl">
+    <div class="relative h-fit">
         <button
             class="cancel z-20 absolute top-2 right-2"
             onclick={`Close_Event('${id}', '${form_id}')`}>
@@ -27,7 +27,7 @@ const { id, form_id } = Astro.props;
                 ></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"
                 ></path></svg>
         </button>
-        <article class="flex items-center !w-full h-full relative top-0 gap-4">
+        <article class="flex items-center !w-full relative top-0 gap-4 h-full overflow-y-auto">
             <div class="hidden lg:flex items-center h-fit justify-center rounded-2xl relative flex-col gap-2">
                 <div class="w-full h-8 border-dashed border-2 border-dark/40 rounded-lg"></div>
                 <img src="/assets/watson.webp" alt="Foto del gato de Eduardo Castilla">
@@ -36,11 +36,33 @@ const { id, form_id } = Astro.props;
 
             <form
                 method="POST"
-                class="form_element px-4 max-w-md min-h-full"
+                class="form_element md:px-4 max-w-md min-h-full"
                 id={form_id}
                 enctype="multipart/form-data"
             >
-                    <slot></slot>
+                <div class="input_container !gap-1">
+                    <h4 class="text-base md:text-xl font-bold">Cuéntame sobre tu idea</h4>
+                    <p class="!text-xs">Me pondré en contacto contigo lo antes posible.</p>
+                </div>
+                <div class="input_container">
+                    <label for='nombres'>Nombres</label>
+                    <input type="text" name='nombres' id='nombres' />
+                </div>
+                <div class="input_container md:!col-span-2">
+                    <label for='correo'>Correo</label>
+                    <input type="email" name='correo' id='correo' />
+                </div>
+                <div class="input_container md:!col-span-2">
+                    <label for='telefono'>Telefono</label>
+                    <input type="text" name='telefono' id='telefono' />
+                </div>
+                <div class="input_container">
+                    <label for='mensaje'>Mensaje</label>
+                    <textarea name='mensaje' id='mensaje' class="py-4"></textarea>
+                </div>
+                <div class="input_container">
+                    <button type="submit" class="bg-primary text-white w-full py-3 rounded-lg">Enviar</button>
+                </div>
             </form>
         </article>
     </div>

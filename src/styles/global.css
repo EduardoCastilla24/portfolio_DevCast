@@ -45,7 +45,7 @@ h3 {
   }
 }
 
-.overflow-x-auto::-webkit-scrollbar {
+.overflow-x-auto::-webkit-scrollbar, dialog::-webkit-scrollbar, dialog > div > article::-webkit-scrollbar {
   display: none;
 }
 

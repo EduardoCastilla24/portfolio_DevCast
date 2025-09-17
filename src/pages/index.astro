@@ -19,30 +19,5 @@ import Modal from '@/components/Modal.astro';
 	<Contact/>
 	<Footer/>
 
-    <Modal id="modal_contact" form_id="modal_contact_form">
-
-		<div class="input_container !gap-1">
-            <h4 class="text-xl font-bold">Cuéntame sobre tu idea</h4>
-            <p class="!text-xs">Me pondré en contacto contigo lo antes posible.</p>
-        </div>
-		<div class="input_container">
-            <label for='nombres'>Nombres</label>
-            <input type="text" name='nombres' id='nombres' />
-        </div>
-        <div class="input_container !col-span-2">
-            <label for='correo'>Correo</label>
-            <input type="email" name='correo' id='correo' />
-        </div>
-        <div class="input_container !col-span-2">
-            <label for='telefono'>Telefono</label>
-            <input type="text" name='telefono' id='telefono' />
-        </div>
-        <div class="input_container !col-span-4">
-            <label for='mensaje'>Mensaje</label>
-            <textarea name='mensaje' id='mensaje' class="py-4"></textarea>
-        </div>
-        <div class="input_container !col-span-4">
-            <button type="submit" class="bg-primary text-white w-full py-3 rounded-lg">Enviar</button>
-        </div>
-    </Modal>
+    <Modal id="modal_contact" form_id="modal_contact_form"/>
 </Layout>
