@@ -9,6 +9,8 @@
   --color-gray: #f6f6f6;
   --color-text-color: #353535;
 
+  --breakpoint-xs: 25rem;
+
   --animate-slide: slide 15s linear infinite;
 }
 
