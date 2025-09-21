@@ -13,11 +13,16 @@
 		<link rel="icon" type="image/svg+xml" href="/assets/iso_DevCast.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>DevCast | Desarrollador y programador Web</title>
+
+		<link rel="stylesheet" href="/js/notiflix/notiflix.css" />
 	</head>
 	<body class="flex flex-col items-center bg-white dark:bg-dark h-fit md:h-[calc(100dvh-4rem)]">
 		<slot />
 	</body>
 </html>
+
+<script type="module" src="/js/notiflix/notiflix.js" is:inline></script>
+<script type="module" src="/js/MagicLoops/magicLoops.js" is:inline></script>
 
 <style>
 	html,
