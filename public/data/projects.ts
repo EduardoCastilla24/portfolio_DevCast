@@ -20,16 +20,25 @@ const projects = [
     ]
   },
   {
-  "title": "Plataforma de Clasificación Médica",
-  "link": "https://catalogo-cie10.netlify.app/cie-10",
-  "description": "Desarrollé una aplicación web que permite explorar y buscar en catálogos médicos oficiales del MINSA, incluyendo el CIE-10 y el CPMS.",
-  "badges": ["Astro", "TailwindCSS", "JavaScript", "React"],
-  "images": [
-    "/assets/projects/cie10_1.webp",
-    "/assets/projects/cpms_1.webp"
-  ]
-}
-
+    "title": "Plataforma de Clasificación Médica",
+    "link": "https://catalogo-cie10.netlify.app/cie-10",
+    "description": "Desarrollé una aplicación web que permite explorar y buscar en catálogos médicos oficiales del MINSA, incluyendo el CIE-10 y el CPMS.",
+    "badges": ["Astro", "TailwindCSS", "JavaScript", "React"],
+    "images": [
+      "/assets/projects/cie10_1.webp",
+      "/assets/projects/cpms_1.webp"
+    ],
+  },
+  {
+    "title": "Directorio de Jefes de IPRESS",
+    "link": "https://app5.systemperu.digital/directorio",
+    "description": "Plataforma web para la consulta del Directorio de Jefes de los Establecimientos de Salud (IPRESS) del Primer Nivel de Atención en la Región Ica.",
+    "badges": ["React", "TailwindCSS", "TypeScript"],
+    "images": [
+      "/assets/projects/ipress_1.webp",
+      "/assets/projects/ipress_2.webp",
+    ]
+  }
 ]
 
 export default projects;
