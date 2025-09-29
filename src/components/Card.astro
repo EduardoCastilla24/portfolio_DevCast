@@ -3,12 +3,13 @@ import Badge from "@/components/Badge.astro";
 
 interface Props {
     title: string;
+    link?: string;
     description: string;
     badges: string[];
     images: string[];
 }
 
-const { title, description, badges, images } = Astro.props as Props;
+const { title, link, description, badges, images } = Astro.props as Props;
 ---
 
 <article class="space-y-8 border border-gray-200 flex flex-col rounded-2xl shadow-sm p-6 py-8 relative w-full lg:w-md items-center">
@@ -17,7 +18,20 @@ const { title, description, badges, images } = Astro.props as Props;
     </div>
 
     <div class="relative text-start w-full">
-        <h4 class="font-bold">{title}</h4>
+        <h4 class="font-bold">
+        {link && link.trim() !== "" ? (
+            <a
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hover:underline"
+            >
+            {title}
+            </a>
+        ) : (
+            title
+        )}
+        </h4>
         <p class="">{description}</p>
     </div>
 

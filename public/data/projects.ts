@@ -1,6 +1,7 @@
 const projects = [
   {
     "title": "Balanza con Gestión de Residuos",
+    "link": "",
     "description": "Desarrollé una balanza digital con registro y control de residuos, logrando reconocimiento municipal en la provincia Chincha.",
     "badges": ["Mysql", "Laravel", "JavaScript"],
     "images": [
@@ -10,6 +11,7 @@ const projects = [
   },
   {
     "title": "Sistema de Gestión de Productos Internos",
+    "link": "",
     "description": "Diseñé un sistema interno de búsqueda de productos para optimizar la consulta y control de inventario.",
     "badges": ["Astro", "Tailwindcss", "JavaScript"],
     "images": [
@@ -17,6 +19,17 @@ const projects = [
       "/assets/projects/tottus_2.webp",
     ]
   },
+  {
+  "title": "Plataforma de Clasificación Médica",
+  "link": "https://catalogo-cie10.netlify.app/cie-10",
+  "description": "Desarrollé una aplicación web que permite explorar y buscar en catálogos médicos oficiales del MINSA, incluyendo el CIE-10 y el CPMS.",
+  "badges": ["Astro", "TailwindCSS", "JavaScript", "React"],
+  "images": [
+    "/assets/projects/cie10_1.webp",
+    "/assets/projects/cpms_1.webp"
+  ]
+}
+
 ]
 
 export default projects;
