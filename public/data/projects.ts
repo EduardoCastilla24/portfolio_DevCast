@@ -20,8 +20,8 @@ const projects = [
     ]
   },
   {
-    "title": "Plataforma de Clasificación Médica",
-    "link": "https://catalogo-cie10.netlify.app/cie-10",
+    "title": "MediQ Codes - Plataforma de Clasificación Médica",
+    "link": "https://mediq-codes.netlify.app/cie-10",
     "description": "Desarrollé una aplicación web que permite explorar y buscar en catálogos médicos oficiales del MINSA, incluyendo el CIE-10 y el CPMS.",
     "badges": ["Astro", "TailwindCSS", "JavaScript", "React"],
     "images": [
